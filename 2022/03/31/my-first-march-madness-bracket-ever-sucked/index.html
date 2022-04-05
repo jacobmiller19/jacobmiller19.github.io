@@ -57,7 +57,7 @@
 
   <article class="article">
     
-    <span class="article-duration">2 min read</span>
+    <span class="article-duration">15 min read</span>
     
 
     <h1 class="article-title">My first March Madness bracket ever... SUCKED!!!</h1>
@@ -70,10 +70,1340 @@
       
 
 
-<p>Well, when you’re at a young age like I am in college, you have to try some things you’ve never tried before to get that experience! No, it’s not what you think I’m talking about. I’m talking about making a NCAA March Madness Tournament Bracket. What did you think I was talk- you know what never mind, that’s besides the point.</p>
 <p>Now, I’ll give out some warnings here. I have played sports since I was the young age of 4. I grew up playing baseball, football, soccer, and ice hockey. My only exception to the sport of basketball was that I played guard in the 8th grade because I was pretty tall for my age. So I technically played one season of basketball even though I only played probably a whopping 20 minutes all year, probably 8 games.</p>
 <p>My knowledge of basketball is very close to about a rock when it comes to knowing data analytics and such in basketball because I just don’t follow or watch the sport that much. I was too busy playing hockey during the basketball season and I’ll be upfront, I am horrible at basketball. All I have for a skill set in basketball is that I could pass using my hockey ability and be able to run up and down the court because of my soccer, baseball, and hockey ability.</p>
-<p>So, with my very little knowledge about basketball, I was told to take some stats and make a March Madness bracket out of who I thought had the best stats in certain areas. Want to hear my reasoning of why I chose what I did? ALL OFFENSE, NO DEFENSE! Now, the reason I say this is because I didn’t say I’ve never watch basketball before, I just have no interest in playing it or following it that much. If it is on at a sports bar, I’ll probably glance over at it here and there and one thing I notice the most, especially playing sports where defense is very crucial and important, is that players either very rarely play defense or not at all and I mean coming back to defend and actually pick up their man. So I decided to take all offensive stats of this past college basketball season and run RStudio based on that and hopefully pick my winning team from that!</p>
+<p>My first ever March Madness bracket challenge is all offensive power. The reason why I chose this is because free throws should be, if not, automatic so I left that term out of my notebook, there is not a lot of defense played and no one really sparks me as a defensive team in college basketball, and offense is what everyone is going to rely on in the tournament to get a lead and try and keep pounding offensive stats. Good basketball teams win by scoring a lot of points and having good offensive stats. Bad basketball teams do not score a lot of points and get railed on defense by a really good offensive team and give up a lot of points.</p>
+<p>I’ll use logistic regression and random forest as my choice of machine learning tools. The reason why I chose these two options is because logistic regressions will do a good job of finding my stats and where they rank among other schools and random forests will be good because we need to predict winners for the March Madness Tournament and this machine should help me decide of my state who should win the March Madness Tournament.</p>
+<p>Now, the reason I chose this is because I didn’t say I’ve never watch basketball before, I just have no interest in playing it or following it that much. If it is on at a sports bar, I’ll probably glance over at it here and there and one thing I notice the most, especially playing sports where defense is very crucial and important, is that players either very rarely play defense or not at all and I mean coming back to defend and actually pick up their man. So I decided to take all offensive stats of this past college basketball season and run RStudio based on that and hopefully pick my winning team from that!</p>
+<p>When I tell you shit hit the fan… why don’t you just take a look at my Midwest Regional 1st Round bracket.</p>
+<div id="tybgyjrjlh" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#tybgyjrjlh .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: none;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#tybgyjrjlh .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#tybgyjrjlh .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#tybgyjrjlh .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#tybgyjrjlh .gt_bottom_border {
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tybgyjrjlh .gt_col_headings {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#tybgyjrjlh .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#tybgyjrjlh .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#tybgyjrjlh .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#tybgyjrjlh .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#tybgyjrjlh .gt_column_spanner {
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#tybgyjrjlh .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#tybgyjrjlh .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#tybgyjrjlh .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#tybgyjrjlh .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#tybgyjrjlh .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: none;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#tybgyjrjlh .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tybgyjrjlh .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#tybgyjrjlh .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#tybgyjrjlh .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tybgyjrjlh .gt_first_summary_row {
+  border-top-style: none;
+  border-top-color: #D3D3D3;
+}
+
+#tybgyjrjlh .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#tybgyjrjlh .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tybgyjrjlh .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tybgyjrjlh .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: none;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#tybgyjrjlh .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#tybgyjrjlh .gt_table_body {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tybgyjrjlh .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#tybgyjrjlh .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tybgyjrjlh .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#tybgyjrjlh .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tybgyjrjlh .gt_left {
+  text-align: left;
+}
+
+#tybgyjrjlh .gt_center {
+  text-align: center;
+}
+
+#tybgyjrjlh .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#tybgyjrjlh .gt_font_normal {
+  font-weight: normal;
+}
+
+#tybgyjrjlh .gt_font_bold {
+  font-weight: bold;
+}
+
+#tybgyjrjlh .gt_font_italic {
+  font-style: italic;
+}
+
+#tybgyjrjlh .gt_super {
+  font-size: 65%;
+}
+
+#tybgyjrjlh .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#tybgyjrjlh .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#tybgyjrjlh .gt_slash_mark {
+  font-size: 0.7em;
+  line-height: 0.7em;
+  vertical-align: 0.15em;
+}
+
+#tybgyjrjlh .gt_fraction_numerator {
+  font-size: 0.6em;
+  line-height: 0.6em;
+  vertical-align: 0.45em;
+}
+
+#tybgyjrjlh .gt_fraction_denominator {
+  font-size: 0.6em;
+  line-height: 0.6em;
+  vertical-align: -0.05em;
+}
+</style>
+<table class="gt_table">
+  <thead class="gt_header">
+    <tr>
+      <th colspan="3" class="gt_heading gt_title gt_font_normal" style="color: #000000; text-align: left; font-weight: bold;">Midwest Regional: Round 1</th>
+    </tr>
+    <tr>
+      <th colspan="3" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="color: #000000; text-align: left;">Oh, just wait, it gets worse.</th>
+    </tr>
+  </thead>
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-size: 12; font-weight: bold;">Team</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-size: 12; font-weight: bold;">Prediction</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-size: 12; font-weight: bold;">Opponent</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">Wisconsin</td>
+<td class="gt_row gt_center">L</td>
+<td class="gt_row gt_left">Colgate</td></tr>
+    <tr><td class="gt_row gt_left gt_striped">San Diego State</td>
+<td class="gt_row gt_center gt_striped">W</td>
+<td class="gt_row gt_left gt_striped">Creighton</td></tr>
+    <tr><td class="gt_row gt_left">LSU</td>
+<td class="gt_row gt_center">W</td>
+<td class="gt_row gt_left">Iowa State</td></tr>
+    <tr><td class="gt_row gt_left gt_striped">Auburn</td>
+<td class="gt_row gt_center gt_striped">L</td>
+<td class="gt_row gt_left gt_striped">J'Ville St</td></tr>
+    <tr><td class="gt_row gt_left">USC</td>
+<td class="gt_row gt_center">L</td>
+<td class="gt_row gt_left">Miami</td></tr>
+    <tr><td class="gt_row gt_left gt_striped">Iowa</td>
+<td class="gt_row gt_center gt_striped">W</td>
+<td class="gt_row gt_left gt_striped">Richmond</td></tr>
+    <tr><td class="gt_row gt_left">Providence</td>
+<td class="gt_row gt_center">L</td>
+<td class="gt_row gt_left">S Dakota St</td></tr>
+    <tr><td class="gt_row gt_left gt_striped">Kansas</td>
+<td class="gt_row gt_center gt_striped">W</td>
+<td class="gt_row gt_left gt_striped">Texas Southern</td></tr>
+  </tbody>
+  <tfoot class="gt_sourcenotes">
+    <tr>
+      <td class="gt_sourcenote" colspan="3"><strong>By:</strong> Jacob Miller</td>
+    </tr>
+  </tfoot>
+  
+</table>
+</div>
+<p>My other regions did better than my Midwest region but still were not very good. Now, I know what you’re thinking, “You had Wisconsin losing to Colgate, San Diego State beating Creighton, Auburn losing to Jacksonville State, and Providence losing to South Dakota State?”</p>
+<p>Yup.</p>
+<p>LSU and Iowa screwed me and decided “Oh, we don’t want to win and we’ll just lose to lower seeded teams!” So out of the 8 games that went on in the Midwest region, I got the USC/Miami and Kansas/Texas Southern games correct for my predictions, which is not very good only having 2 out of the 8 games you predicted be correct.</p>
+<p>My round of 32 teams did well as majority I had 2 out of 4 correct and one 3 out of 4 correct. The Sweet 16 could’ve been better but at least I was correct in saying Duke and Villanova would move on to the Elite 8, but none of my other picks made it. then we make it to the Final Four.</p>
+<div id="geyfzneviv" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#geyfzneviv .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: none;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#geyfzneviv .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#geyfzneviv .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#geyfzneviv .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#geyfzneviv .gt_bottom_border {
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#geyfzneviv .gt_col_headings {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#geyfzneviv .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#geyfzneviv .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#geyfzneviv .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#geyfzneviv .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#geyfzneviv .gt_column_spanner {
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#geyfzneviv .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#geyfzneviv .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#geyfzneviv .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#geyfzneviv .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#geyfzneviv .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: none;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#geyfzneviv .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#geyfzneviv .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#geyfzneviv .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#geyfzneviv .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#geyfzneviv .gt_first_summary_row {
+  border-top-style: none;
+  border-top-color: #D3D3D3;
+}
+
+#geyfzneviv .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#geyfzneviv .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#geyfzneviv .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#geyfzneviv .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: none;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#geyfzneviv .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#geyfzneviv .gt_table_body {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#geyfzneviv .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#geyfzneviv .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#geyfzneviv .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#geyfzneviv .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#geyfzneviv .gt_left {
+  text-align: left;
+}
+
+#geyfzneviv .gt_center {
+  text-align: center;
+}
+
+#geyfzneviv .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#geyfzneviv .gt_font_normal {
+  font-weight: normal;
+}
+
+#geyfzneviv .gt_font_bold {
+  font-weight: bold;
+}
+
+#geyfzneviv .gt_font_italic {
+  font-style: italic;
+}
+
+#geyfzneviv .gt_super {
+  font-size: 65%;
+}
+
+#geyfzneviv .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#geyfzneviv .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#geyfzneviv .gt_slash_mark {
+  font-size: 0.7em;
+  line-height: 0.7em;
+  vertical-align: 0.15em;
+}
+
+#geyfzneviv .gt_fraction_numerator {
+  font-size: 0.6em;
+  line-height: 0.6em;
+  vertical-align: 0.45em;
+}
+
+#geyfzneviv .gt_fraction_denominator {
+  font-size: 0.6em;
+  line-height: 0.6em;
+  vertical-align: -0.05em;
+}
+</style>
+<table class="gt_table">
+  <thead class="gt_header">
+    <tr>
+      <th colspan="3" class="gt_heading gt_title gt_font_normal" style="color: #000000; text-align: left; font-weight: bold;">Final Four</th>
+    </tr>
+    <tr>
+      <th colspan="3" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="color: #000000; text-align: left;">South Dakota State = Cinderella!</th>
+    </tr>
+  </thead>
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-size: 12; font-weight: bold;">Team</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-size: 12; font-weight: bold;">Prediction</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-size: 12; font-weight: bold;">Opponent</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">Duke</td>
+<td class="gt_row gt_center">L</td>
+<td class="gt_row gt_left">Purdue</td></tr>
+    <tr><td class="gt_row gt_left gt_striped">Arizona</td>
+<td class="gt_row gt_center gt_striped">L</td>
+<td class="gt_row gt_left gt_striped">S Dakota St</td></tr>
+  </tbody>
+  <tfoot class="gt_sourcenotes">
+    <tr>
+      <td class="gt_sourcenote" colspan="3"><strong>By:</strong> Jacob Miller</td>
+    </tr>
+  </tfoot>
+  
+</table>
+</div>
+<p>Yup, you are reading this right. I had the Duke Blue Devils facing off against the Purdue Boilermakers and the Arizona Wildcats versus the South Dakota State Jackrabbits. “Shocker,” I know. These four teams were shooting lights out all season but with exception to Duke, the other three teams shot themselves out of their season.</p>
+<p>Now, here is where you will really get your laughs in when I show you who I had in the championship game.</p>
+<div id="vkbhdfzpox" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#vkbhdfzpox .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: none;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#vkbhdfzpox .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#vkbhdfzpox .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#vkbhdfzpox .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#vkbhdfzpox .gt_bottom_border {
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#vkbhdfzpox .gt_col_headings {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#vkbhdfzpox .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#vkbhdfzpox .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#vkbhdfzpox .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#vkbhdfzpox .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#vkbhdfzpox .gt_column_spanner {
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#vkbhdfzpox .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#vkbhdfzpox .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#vkbhdfzpox .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#vkbhdfzpox .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#vkbhdfzpox .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: none;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#vkbhdfzpox .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vkbhdfzpox .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#vkbhdfzpox .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#vkbhdfzpox .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vkbhdfzpox .gt_first_summary_row {
+  border-top-style: none;
+  border-top-color: #D3D3D3;
+}
+
+#vkbhdfzpox .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#vkbhdfzpox .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#vkbhdfzpox .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vkbhdfzpox .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: none;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#vkbhdfzpox .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#vkbhdfzpox .gt_table_body {
+  border-top-style: none;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#vkbhdfzpox .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#vkbhdfzpox .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vkbhdfzpox .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#vkbhdfzpox .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vkbhdfzpox .gt_left {
+  text-align: left;
+}
+
+#vkbhdfzpox .gt_center {
+  text-align: center;
+}
+
+#vkbhdfzpox .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#vkbhdfzpox .gt_font_normal {
+  font-weight: normal;
+}
+
+#vkbhdfzpox .gt_font_bold {
+  font-weight: bold;
+}
+
+#vkbhdfzpox .gt_font_italic {
+  font-style: italic;
+}
+
+#vkbhdfzpox .gt_super {
+  font-size: 65%;
+}
+
+#vkbhdfzpox .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+#vkbhdfzpox .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#vkbhdfzpox .gt_slash_mark {
+  font-size: 0.7em;
+  line-height: 0.7em;
+  vertical-align: 0.15em;
+}
+
+#vkbhdfzpox .gt_fraction_numerator {
+  font-size: 0.6em;
+  line-height: 0.6em;
+  vertical-align: 0.45em;
+}
+
+#vkbhdfzpox .gt_fraction_denominator {
+  font-size: 0.6em;
+  line-height: 0.6em;
+  vertical-align: -0.05em;
+}
+</style>
+<table class="gt_table">
+  <thead class="gt_header">
+    <tr>
+      <th colspan="3" class="gt_heading gt_title gt_font_normal" style="color: #000000; text-align: left; font-weight: bold;">The Championship Game</th>
+    </tr>
+    <tr>
+      <th colspan="3" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="color: #000000; text-align: left;">Wow was I wrong!</th>
+    </tr>
+  </thead>
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-size: 12; font-weight: bold;">Team</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-size: 12; font-weight: bold;">Prediction</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-size: 12; font-weight: bold;">Opponent</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_left">Duke</td>
+<td class="gt_row gt_center">L</td>
+<td class="gt_row gt_left">S Dakota St</td></tr>
+  </tbody>
+  <tfoot class="gt_sourcenotes">
+    <tr>
+      <td class="gt_sourcenote" colspan="3"><strong>By:</strong> Jacob Miller</td>
+    </tr>
+  </tfoot>
+  
+</table>
+</div>
+<p>Yup, in my perfect world, the South Dakota State Jackrabbits would outlast and out-shoot the Duke Blue Devils and Coach K would lose his last ever college basketball game in the championship game to a Summit League Conference team. Boy would that have been the upset and Cinderella story of the decade! But it wasn’t. And that is where I’m going to figure out what I will do different next time I make a March Madness bracket.</p>
+<p>The next time I fill out a March Madness bracket, I will incorporate some defensive analytics and try and look for a more balanced level of stats for college basketball because a lot of teams were beaten in this years tournament because their offense and defense didn’t show up and their opponents did.</p>
 
     </div>
   </article>
