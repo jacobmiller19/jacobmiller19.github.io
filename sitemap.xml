@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://jacobmiller.github.io/</loc>
+    <lastmod>2022-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://jacobmiller.github.io/post/</loc>
+    <lastmod>2022-05-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://jacobmiller.github.io/2022/05/01/we-didn-t-finish-last/</loc>
+    <lastmod>2022-05-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://jacobmiller.github.io/tags/data/</loc>
     <lastmod>2022-03-31T00:00:00+00:00</lastmod>
   </url><url>
@@ -11,13 +20,7 @@
     <loc>http://jacobmiller.github.io/tags/sports/</loc>
     <lastmod>2022-03-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://jacobmiller.github.io/</loc>
-    <lastmod>2022-03-31T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://jacobmiller.github.io/2022/03/31/my-first-march-madness-bracket-ever-sucked/</loc>
-    <lastmod>2022-03-31T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://jacobmiller.github.io/post/</loc>
     <lastmod>2022-03-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://jacobmiller.github.io/tags/</loc>
